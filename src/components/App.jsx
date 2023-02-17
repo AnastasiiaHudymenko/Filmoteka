@@ -1,16 +1,16 @@
+import { useState } from 'react';
+import { Header } from './Header/Header';
+import { GlobalStyles } from './GlobalStyles';
+
 export const App = () => {
+  const [query, setQuery] = useState('');
+  const handleSearchForm = query => {
+    setQuery(query);
+  };
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Header onSearch={handleSearchForm} />
+      <GlobalStyles />
     </div>
   );
 };
