@@ -4,6 +4,7 @@ import { GlobalStyles } from './GlobalStyles';
 
 export const App = () => {
   const [query, setQuery] = useState('');
+  console.log(query);
   const handleSearchForm = query => {
     setQuery(query);
   };
